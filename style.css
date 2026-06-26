@@ -1,0 +1,395 @@
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'insungitCutelivelyjisu';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/insungitCutelivelyjisu.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ownglyph_eunbyul21-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_eunbyul21-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IM_Hyemin-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 설정 */
+* {
+  margin : 0;
+  padding : 0;
+  vertical-align : middle;
+  border : 0;
+  box-sizing : border-box;
+}
+ul,li {
+  list-style:none;
+}
+p {
+  margin: 0;
+}
+
+#wrap {
+  width: 1420px;
+  height: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 검색창 */
+#header {
+  margin-top: 5px;
+}
+#header .form-control {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#header .btn {
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #3377a5;
+  color: #3377a5;
+}
+
+#header .btn:hover {
+  background-color: #3377a5;
+  color: #ffffff;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  border-right: none;
+  margin-right: 5px;
+}
+
+.btn {
+  border-left: none;
+}
+
+/* main */
+#main {
+  width: 100%;
+  height: 620px;
+  padding: 25px;
+  position: relative;
+  font-family: 'IM_Hyemin-Bold';
+}
+
+/* 검색 전 기본값 */
+#default {
+  width: 1350px;
+  height: 570px;
+  position: absolute;
+  display: block;
+  background: url("img/main.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+
+#default.hidden {
+  opacity: 0;
+}
+
+/* 왼쪽 */
+.left {
+  width: 650px;
+  height: 570px;
+  padding: 20px;
+  float: left;
+}
+.left .top {
+  width: 100%;
+  height: 50px;
+  padding: 10px 0;
+}
+.top p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.left .mid {
+  width: 100%;
+  height: 230px;
+  margin: 20px 0;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.left .mid .mid_l {
+  width: 300px;
+  height: 230px;
+  padding: 0 35px;
+  float: left;
+}
+
+.mid_l .image {
+  width: 230px; 
+  height: 230px; 
+  background-size: cover;
+  background-position: center; 
+  z-index: 999;
+}
+
+.left .mid .mid_r {
+  width: 300px;
+  height: 230px;
+  float: right;
+}
+.mid_r .temp {
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  font-size: 70px;
+}
+.mid_r .sky {
+  width: 100%;
+  height: 50px;
+  padding: 12.5px 0;
+  text-align: center;
+  font-size: 19px;
+  line-height: 19px;
+}
+.mid_r .air {
+  width: 100%;
+  height: 50px;
+  padding: 5.5px 0;
+  text-align: center;
+  font-size: 19px;
+  line-height: 19px;
+}
+
+.left .bot {
+  width: 610px;
+  height: 210px;
+}
+.bot .hour1 {
+  width: 122px;
+  height: 210px;
+  padding: 10px;
+  float: left;
+  background: #ffffff;
+}
+.bot .hour1 .hour {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour1 .icon {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.bot .hour1 .icon .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+}
+.bot .hour1 .temp {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour1 .water {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.bot .hour2 {
+  width: 122px;
+  height: 210px;
+  padding: 10px;
+  float: left;
+  background: #ffffff;
+}
+.bot .hour2 .hour {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour2 .icon {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.bot .hour2 .icon .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+}
+.bot .hour2 .temp {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour2 .water {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.bot .hour3 {
+  width: 122px;
+  height: 210px;
+  padding: 10px;
+  float: left;
+  background: #ffffff;
+}
+.bot .hour3 .hour {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour3 .icon {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.bot .hour3 .icon .image {
+  width: 100%;  
+  height: 100%; 
+  background-size: cover; 
+  background-position: center; 
+  z-index: 999;
+}
+.bot .hour3 .temp {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour3 .water {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.bot .hour4 {
+  width: 122px;
+  height: 210px;
+  padding: 10px;
+  float: left;
+  background: #ffffff;
+}
+.bot .hour4 .hour {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour4 .icon {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.bot .hour4 .icon .image {
+  width: 100%;  
+  height: 100%; 
+  background-size: cover; 
+  background-position: center; 
+  z-index: 999;
+}
+.bot .hour4 .temp {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour4 .water {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.bot .hour5 {
+  width: 122px;
+  height: 210px;
+  padding: 10px;
+  float: left;
+  background: #ffffff;
+}
+.bot .hour5 .hour {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour5 .icon {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.bot .hour5 .icon .image {
+  width: 100%;  
+  height: 100%; 
+  background-size: cover; 
+  background-position: center; 
+  z-index: 999;
+}
+.bot .hour5 .temp {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+.bot .hour5 .water {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+
+/* 오른쪽 */
+.right {
+  width: 700px;
+  height: 570px;
+  float: left;
+  overflow: hidden;
+}
+.right #recommend {
+  width: 100%;
+}
+#recommend img {
+  width: 100%;
+}
+
+#footer p {
+  font-size: smaller;
+  color: #656565;
+}
+
+/* fade-in 효과 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out; /* 애니메이션 효과 */
+  opacity: 1;
+}
+
